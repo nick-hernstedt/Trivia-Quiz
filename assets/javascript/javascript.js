@@ -45,6 +45,7 @@ let count = 0;
 const questionTime = 10; // 10s
 const gaugeWidth = 150; // 150px
 const gaugeUnit = gaugeWidth / questionTime;
+let score = 0;
 
 // render a question
 function renderQuestion(){
@@ -88,4 +89,34 @@ function renderCounter(){
     }else{
         count = 0;
     }
+}
+
+//check answer
+
+function checkAnswer(answer){
+    if( answer == questions[runningQuestion].correct) {
+        //answer is correct
+        score++;
+        //change progress color to green
+        answerIsCorrect();
+    }else{
+        //answer is wrong
+        //change to red
+        answerIsWrong();
+    }
+    count = 0;
+    if(runningQuestion < lastQuestion){
+        runningQuestion++;
+        renderQuestion();
+    }
+}
+
+//answer is correct
+function answerIsCorrect(){
+    document.getElementById(runningQuestion).style.backgroundColor = "#0f0"
+}
+
+//answer is wrong
+function answerIsWrong(){
+    document.getElementById(runningQuestion).style.backgroundColor = "#f00"
 }
