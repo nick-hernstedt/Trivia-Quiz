@@ -88,6 +88,12 @@ function renderCounter(){
         count++
     }else{
         count = 0;
+        // change bubble to red
+        answerIsWrong();
+        if(runningQuestion < lastQuestion){
+            runningQuestion++;
+            renderQuestion();
+        }
     }
 }
 
