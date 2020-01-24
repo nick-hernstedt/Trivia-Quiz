@@ -4,12 +4,12 @@ const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
 const qImg = document.getElementById("qImg");
 const choiceA = document.getElementById("A");
-const choiceA = document.getElementById("B");
-const choiceA = document.getElementById("C");
-const choiceB = document.getElementById("counter");
-const choiceC = document.getElementById("timerGauge");
-const counter = document.getElementById("progress");
-const progress = document.getElementById("score");
+const choiceB = document.getElementById("B");
+const choiceC = document.getElementById("C");
+const counter = document.getElementById("counter");
+const timeGauge = document.getElementById("timeGauge");
+const progress = document.getElementById("progress");
+const score = document.getElementById("score");
 
 //  create our questions
  let questions = [
@@ -57,10 +57,27 @@ start.style.display = "none";
 renderQuestion();
 quiz.style.display= "block";
 renderProgress();
+renderQuestion
 
 // render progress
 function renderProgress () {
     for(let qIndex = 0; qIndex <= listQuestion; qIndex++) {
         progress.innerHTML += "<div class='prog' id=" + qIndex +"></div>";
+    }
+}
+
+// counter render
+let count = 0;
+const questionTime = 10; // 10s
+const gaugeWidth = 150; // 150px
+const gaugeUnit = gaugeWidth / questionTime;
+
+function renderCounter(){
+    if(count <= questionTime){
+        counter.innerHTML = count;
+        timeGauge.style.width = count * gaugeUnit;
+        count++
+    }else{
+        count = 0;
     }
 }
