@@ -41,6 +41,10 @@ const score = document.getElementById("score");
 
 const lastQuestion = questions.length -1;
 let runningQuestion = 0;
+let count = 0;
+const questionTime = 10; // 10s
+const gaugeWidth = 150; // 150px
+const gaugeUnit = gaugeWidth / questionTime;
 
 // render a question
 function renderQuestion(){
@@ -53,29 +57,33 @@ function renderQuestion(){
     choiceC.innerHTML = q.choiceC;
 }
 
-start.style.display = "none";
-renderQuestion();
-quiz.style.display= "block";
-renderProgress();
-renderQuestion
+start.addEventListener("click", startQuiz);
+
+//start quiz
+function startQuiz(){
+    start.style.display = "none";
+    renderQuestion();
+    quiz.style.display= "block";
+    renderProgress();
+    renderCounter();
+    TIMER = setInterval(renderCounter, 1000); // 1000ms
+}
+
+
 
 // render progress
 function renderProgress () {
-    for(let qIndex = 0; qIndex <= listQuestion; qIndex++) {
+    for(let qIndex = 0; qIndex <= lastQuestion; qIndex++) {
         progress.innerHTML += "<div class='prog' id=" + qIndex +"></div>";
     }
 }
 
 // counter render
-let count = 0;
-const questionTime = 10; // 10s
-const gaugeWidth = 150; // 150px
-const gaugeUnit = gaugeWidth / questionTime;
 
 function renderCounter(){
     if(count <= questionTime){
         counter.innerHTML = count;
-        timeGauge.style.width = count * gaugeUnit;
+        timeGauge.style.width = count * gaugeUnit + "px";
         count++
     }else{
         count = 0;
