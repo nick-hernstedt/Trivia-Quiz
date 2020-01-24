@@ -9,7 +9,7 @@ const choiceC = document.getElementById("C");
 const counter = document.getElementById("counter");
 const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
-const score = document.getElementById("score");
+const scoreDiv = document.getElementById("score");
 
 //  create our questions
  let questions = [
@@ -93,9 +93,13 @@ function renderCounter(){
         if(runningQuestion < lastQuestion){
             runningQuestion++;
             renderQuestion();
+        }else{
+            //end the quiz and show the score
+            clearInterval(TIMER);
         }
     }
 }
+
 
 //check answer
 
@@ -114,6 +118,10 @@ function checkAnswer(answer){
     if(runningQuestion < lastQuestion){
         runningQuestion++;
         renderQuestion();
+    }else{
+        //end the quiz and show the score
+        clearInterval(TIMER);
+        scoreRender();
     }
 }
 
@@ -125,4 +133,23 @@ function answerIsCorrect(){
 //answer is wrong
 function answerIsWrong(){
     document.getElementById(runningQuestion).style.backgroundColor = "#f00"
+}
+
+//score render
+function scoreRender(){
+    scoreDiv.style.display = "block";
+
+    //calculate % correct answers
+    const scorePercent = Math.round(100 * score/questions.length);
+
+    //show image based off the score
+    let img = (scorePercent >= 80) ? "img/5.png" :
+              (scorePercent >= 60) ? "img/5.png" :
+              (scorePercent >= 40) ? "img/5.png" :
+              (scorePercent >= 20) ? "img/5.png" :
+              "img/1.png"
+
+              scoreDiv.innerHTML = "<img src="+ img + ">";
+              scoreDiv.innerHTML = "<p>" + scorePercent + "%</p>";
+
 }
