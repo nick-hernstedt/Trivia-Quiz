@@ -36,3 +36,23 @@ const progress = document.getElementById("score");
         correct : "A"
     } ,
  ]
+
+//  create some variables
+
+const lastQuestion = questions.length -1;
+let runningQuestion = 0;
+
+// render a question
+function renderQuestion(){
+    let q = questions[runningQuestion];
+
+    question.innerHTML = "<p>"+ q.question +"</p>";
+    qImg.innerHTML = "<img src="+ q.imgSrc +">";
+    choiceA.innerHTML = q.choiceA;
+    choiceB.innerHTML = q.choiceB;
+    choiceC.innerHTML = q.choiceC;
+}
+
+start.style.display = "none";
+renderQuestion();
+quiz.style.display= "block";
