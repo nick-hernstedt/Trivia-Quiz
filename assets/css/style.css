@@ -58,20 +58,25 @@ body{
 }
 
 #choices{
-    width : 480px;
-    position: absolute;
+    width : 600px;
+    position: relative;
     right : 0;
     top : 125px;
-    padding : 10px
+    margin-left: 210px;
+ 
+    
+   
 }
 .choice{
     display: inline-block;
-    width : 135px;
+    width : 150px;
+    height : 72px;
     text-align: center;
     border : 1px solid grey;
     border-radius: 5px;
     cursor: pointer;
     padding : 5px;
+    font-style: italic;
 }
 .choice:hover{
     border : 2px solid grey;

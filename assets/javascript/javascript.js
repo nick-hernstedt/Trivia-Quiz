@@ -14,25 +14,39 @@ const scoreDiv = document.getElementById("score");
 //  create our questions
  let questions = [
      {
-         question : "",
-         imgSrc : "",
-         choiceA : "Correct",
-         choiceB : "Wrong",
-         choiceC : "Wrong",
-         correct : "A"
+         question : "What species of reptile is this",
+         imgSrc : "./assets/images/coral.jpg",
+         choiceA : "Nerodia rhombifer",
+         choiceB : "Micrurus fulvius",
+         choiceC : "Ophiophagus hannah",
+         correct : "B"
      } ,   {
-        question : "",
-        imgSrc : "",
-        choiceA : "Correct",
-        choiceB : "Wrong",
-        choiceC : "Wrong",
-        correct : "A"
+        question : "What species of bird is this",
+        imgSrc : "./assets/images/harpy.jpg",
+        choiceA : "Falco peregrinus",
+        choiceB : "Haliaeetus leucocephalus",
+        choiceC : "Harpia harpyja",
+        correct : "C"
     } ,  {
-        question : "",
-        imgSrc : "",
-        choiceA : "Correct",
-        choiceB : "Wrong",
-        choiceC : "Wrong",
+        question : "What species of amphibian is this",
+        imgSrc : "./assets/images/sonoran.jpg",
+        choiceA : "Megophrys nasuta",
+        choiceB : "Incilius alvarius",
+        choiceC : "Dendrobates tinctorius",
+        correct : "B"
+    } , {
+        question : "What species of mammal is this",
+        imgSrc : "./assets/images/opossum.jpg",
+        choiceA : "Didelphis virginiana",
+        choiceB : "Procyon lotor",
+        choiceC : "Pseudocheirus peregrinus",
+        correct : "A"
+    } , {
+        question : "What species of fish is this?",
+        imgSrc : "./assets/images/parrotfish.jpg",
+        choiceA : "Cetoscarus ocellatus",
+        choiceB : "Chlorurus michrohinos",
+        choiceC : "Chlorurus sordidus",
         correct : "A"
     } ,
  ]
@@ -143,11 +157,11 @@ function scoreRender(){
     const scorePercent = Math.round(100 * score/questions.length);
 
     //show image based off the score
-    let img = (scorePercent >= 80) ? "img/5.png" :
-              (scorePercent >= 60) ? "img/5.png" :
-              (scorePercent >= 40) ? "img/5.png" :
-              (scorePercent >= 20) ? "img/5.png" :
-              "img/1.png"
+    let img = (scorePercent >= 80) ? "./assets/images/parrotfish.jpg" :
+              (scorePercent >= 60) ? "./assets/images/parrotfish.jpg" :
+              (scorePercent >= 40) ? "./assets/images/parrotfish.jpg" :
+              (scorePercent >= 20) ? "./assets/images/parrotfish.jpg" :
+                                        "./assets/images/parrotfish.jpg"
 
               scoreDiv.innerHTML = "<img src="+ img + ">";
               scoreDiv.innerHTML = "<p>" + scorePercent + "%</p>";
