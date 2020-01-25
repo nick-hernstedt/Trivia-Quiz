@@ -119,10 +119,10 @@ function scoreRender(){
     
     // choose the image based on the scorePerCent
     let img = (scorePerCent >= 80) ? "./assets/images/80.jpg" :
-              (scorePerCent >= 60) ? "./assets/images/60.jpg" :
-              (scorePerCent >= 40) ? "./assets/images/40.jpg" :
-              (scorePerCent >= 20) ? "./assets/images/20.jpg" :
-              "./assets/images/0.jpg";
+              (scorePerCent >= 60) ? "./assets/images/80.jpg" :
+              (scorePerCent >= 40) ? "./assets/images/80.jpg" :
+              (scorePerCent >= 20) ? "./assets/images/80.jpg" :
+              "./assets/images/80.jpg";
     
     scoreDiv.innerHTML = "<img src="+ img +">";
     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
