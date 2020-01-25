@@ -94,7 +94,7 @@ body{
     width : 150px;
     height : 72px;
     text-align: center;
-    border : 1px solid grey;
+    border : 2px solid #273827;
     border-radius: 5px;
     cursor: pointer;
     padding : 5px;
@@ -102,8 +102,9 @@ body{
     background-color: #598364;
 }
 .choice:hover{
-    border : 2px solid #598364;
+    border : 2px solid #273827;
     font-weight: bold;
+    background-color: #B8BEA1;
 }
 
 #timer{
