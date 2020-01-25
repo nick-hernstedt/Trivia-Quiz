@@ -152,7 +152,7 @@ body{
 #scoreContainer{
     margin : 20px auto;
     background-color: white;
-    opacity: 0.8;
+    /* opacity: 0.8; */
     height: 300px;
     width : 700px;
     border-radius: 5px;
@@ -162,8 +162,9 @@ body{
 }
 #scoreContainer img{
     position: absolute;
-    top:100px;
-    left:325px;
+    /* top:100px;
+    left:325px; */
+    object-fit: contain;
 }
 #scoreContainer p{
     position: absolute;
@@ -175,6 +176,7 @@ body{
     font-size: 1.5em;
     font-weight: bold;
     text-align: center;
+    object-fit: contain;
 }
 
 

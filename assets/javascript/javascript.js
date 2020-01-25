@@ -10,7 +10,7 @@ const choiceC = document.getElementById("C");
 const counter = document.getElementById("counter");
 const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
-const scoreDiv = document.getElementById("score");
+const scoreDiv = document.getElementById("scoreContainer");
 
 //  create some variables
 
@@ -109,21 +109,23 @@ function answerIsWrong(){
     document.getElementById(runningQuestion).style.backgroundColor = "#f00"
 }
 
-//score render
+
+// score render
 function scoreRender(){
     scoreDiv.style.display = "block";
-
-    //calculate % correct answers
-    const scorePercent = Math.round(100 * score/questions.length);
-
-    //show image based off the score
-    let img = (scorePercent >= 80) ? "./assets/images/parrotfish.jpg" :
-              (scorePercent >= 60) ? "./assets/images/parrotfish.jpg" :
-              (scorePercent >= 40) ? "./assets/images/parrotfish.jpg" :
-              (scorePercent >= 20) ? "./assets/images/parrotfish.jpg" :
-                                        "./assets/images/parrotfish.jpg"
-
-              scoreDiv.innerHTML = "<img src="+ img + ">";
-              scoreDiv.innerHTML = "<p>" + scorePercent + "%</p>";
-
+    
+    // calculate the amount of question percent answered by the user
+    const scorePerCent = Math.round(100 * score/questions.length);
+    
+    // choose the image based on the scorePerCent
+    let img = (scorePerCent >= 80) ? "./assets/images/80.jpg" :
+              (scorePerCent >= 60) ? "./assets/images/60.jpg" :
+              (scorePerCent >= 40) ? "./assets/images/40.jpg" :
+              (scorePerCent >= 20) ? "./assets/images/20.jpg" :
+              "./assets/images/0.jpg";
+    
+    scoreDiv.innerHTML = "<img src="+ img +">";
+    scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
 }
+
+
