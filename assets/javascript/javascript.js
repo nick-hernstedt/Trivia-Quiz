@@ -56,8 +56,8 @@ const scoreDiv = document.getElementById("score");
 
 const lastQuestion = questions.length -1;
 let runningQuestion = 0;
-let count = 0;
-const questionTime = 10; // 10s
+let count = 15;
+const questionTime = 15; // 10s
 const gaugeWidth = 150; // 150px
 const gaugeUnit = gaugeWidth / questionTime;
 let score = 0;
@@ -65,7 +65,6 @@ let score = 0;
 // render a question
 function renderQuestion(){
     let q = questions[runningQuestion];
-
     question.innerHTML = "<p>"+ q.question +"</p>";
     qImg.innerHTML = "<img src="+ q.imgSrc +">";
     choiceA.innerHTML = q.choiceA;
@@ -97,12 +96,12 @@ function renderProgress () {
 // counter render
 
 function renderCounter(){
-    if(count <= questionTime){
+    if(count >= 0){
         counter.innerHTML = count;
         timeGauge.style.width = count * gaugeUnit + "px";
-        count++
+        count--
     }else{
-        count = 0;
+        count = 15;
         // change bubble to red
         answerIsWrong();
         if(runningQuestion < lastQuestion){
@@ -129,7 +128,7 @@ function checkAnswer(answer){
         //change to red
         answerIsWrong();
     }
-    count = 0;
+    count = 15;
     if(runningQuestion < lastQuestion){
         runningQuestion++;
         renderQuestion();
