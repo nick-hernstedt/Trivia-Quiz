@@ -20,12 +20,13 @@ body{
 
 #container{
     margin : auto;
-    background-color: white;
+    background-color: #B8BEA1;
     height: 300px;
     width : 700px;
     border-radius: 15px;
     box-shadow: 0px 5px 15px 0px;
     position: relative;
+    border: #273827 3px solid;
 }
 #start{
     font-size: 1.5em;
@@ -33,17 +34,17 @@ body{
     word-break: break-all;
     width:100px;
     height:150px;
-    border : 2px solid lightgrey;
+    border : 2px solid #406468;
     text-align: center;
     cursor: pointer;
     position: absolute;
     left:300px;
     top:50px;
-    color : lightgrey;
+    color : #406468;
 }
 #start:hover{
-    border: 3px solid lightseagreen;
-    color : lightseagreen;
+    border: 3px solid #273827;
+    color : #273827;
 }
 
 #qImg{
@@ -59,6 +60,7 @@ body{
     width : 200px;
     height : 200px;
     border-radius: 10px;
+    border: #273827 2px solid;
 }
 
 #question{
@@ -94,9 +96,10 @@ body{
     cursor: pointer;
     padding : 5px;
     font-style: italic;
+    background-color: #598364;
 }
 .choice:hover{
-    border : 2px solid grey;
+    border : 2px solid #598364;
     font-weight: bold;
 }
 
