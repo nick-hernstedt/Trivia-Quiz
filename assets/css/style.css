@@ -74,6 +74,7 @@ body{
     margin : 0;
     padding : 15px;
     font-size: 1.25em;
+    text-align: center;
 }
 
 #choices{
@@ -109,6 +110,7 @@ body{
     width : 200px;
     bottom : 0px;
     text-align: center;
+    margin-bottom: 3px;
 }
 #counter{
     font-size: 3em;
@@ -123,7 +125,7 @@ body{
 #timeGauge{
     height : 10px;
     border-radius: 10px;
-    background-color: mediumseagreen;
+    background-color: #273827;
     margin-top : -10px;
     margin-left : 25px;
 }
