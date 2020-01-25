@@ -165,6 +165,7 @@ body{
     /* top:100px;
     left:325px; */
     object-fit: contain;
+    border-radius: 15px;
 }
 #scoreContainer p{
     position: absolute;
