@@ -21,6 +21,9 @@ const questionTime = 15; // 10s
 const gaugeWidth = 150; // 150px
 const gaugeUnit = gaugeWidth / questionTime;
 let score = 0;
+let localStorageName  = "";
+let highScore;
+
 
 // render a question
 function renderQuestion(){
@@ -95,7 +98,9 @@ function checkAnswer(answer){
     }else{
         //end the quiz and show the score
         clearInterval(TIMER);
+        topScore();
         scoreRender();
+        
     }
 }
 
@@ -109,23 +114,50 @@ function answerIsWrong(){
     document.getElementById(runningQuestion).style.backgroundColor = "#f00"
 }
 
+// function to save high score
+function topScore(){
+   
+    if(localStorage.getItem(localStorageName) == null){
+        highScore = 0;
+    } else {
+        highScore = localStorage.getItem(localStorageName);
+    }
+}
+
+
 
 // score render
 function scoreRender(){
     scoreDiv.style.display = "block";
-    
-    // calculate the amount of question percent answered by the user
-    const scorePerCent = Math.round(100 * score/questions.length);
-    
-    // choose the image based on the scorePerCent
-    let img = (scorePerCent >= 80) ? "./assets/images/80.jpg" :
-              (scorePerCent >= 60) ? "./assets/images/80.jpg" :
-              (scorePerCent >= 40) ? "./assets/images/80.jpg" :
-              (scorePerCent >= 20) ? "./assets/images/80.jpg" :
-              "./assets/images/80.jpg";
-    
+       
+        highScore = Math.max(score, highScore);
+        localStorage.setItem(localStorageName, highScore);
+
+        let img = "./assets/images/80.jpg";
+            
     scoreDiv.innerHTML = "<img src="+ img +">";
-    scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
+    scoreDiv.innerHTML += "<p>" + "High Score" + '<br>' + highScore + '<br>' + "Current Score" + '<br>' + score +"</p>";
+  
 }
+
+
+// // score render
+// function scoreRender(){
+//     scoreDiv.style.display = "block";
+    
+//     // calculate the amount of question percent answered by the user
+//     const scorePerCent = Math.round(100 * score/questions.length);
+    
+//     // choose the image based on the scorePerCent
+//     let img = (scorePerCent >= 80) ? "./assets/images/80.jpg" :
+//               (scorePerCent >= 60) ? "./assets/images/80.jpg" :
+//               (scorePerCent >= 40) ? "./assets/images/80.jpg" :
+//               (scorePerCent >= 20) ? "./assets/images/80.jpg" :
+//               "./assets/images/80.jpg";
+    
+//     scoreDiv.innerHTML = "<img src="+ img +">";
+//     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
+// }
+
 
 
