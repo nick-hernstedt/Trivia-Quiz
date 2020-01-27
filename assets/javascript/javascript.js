@@ -11,6 +11,8 @@ const counter = document.getElementById("counter");
 const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
 const scoreDiv = document.getElementById("scoreContainer");
+const reStart = document.getElementById("reStart")
+
 
 //  create some variables
 
@@ -100,6 +102,7 @@ function checkAnswer(answer){
         clearInterval(TIMER);
         topScore();
         scoreRender();
+     
         
     }
 }
@@ -136,28 +139,18 @@ function scoreRender(){
         let img = "./assets/images/80.jpg";
             
     scoreDiv.innerHTML = "<img src="+ img +">";
-    scoreDiv.innerHTML += "<p>" + "High Score" + '<br>' + highScore + '<br>' + "Current Score" + '<br>' + score +"</p>";
-  
+    scoreDiv.innerHTML += "<p>" + "High Score:"  + highScore  + "<br>"  + "Current Score:" + + score +"</p>";
+    reStart.style.display= "block";
 }
 
 
-// // score render
-// function scoreRender(){
-//     scoreDiv.style.display = "block";
-    
-//     // calculate the amount of question percent answered by the user
-//     const scorePerCent = Math.round(100 * score/questions.length);
-    
-//     // choose the image based on the scorePerCent
-//     let img = (scorePerCent >= 80) ? "./assets/images/80.jpg" :
-//               (scorePerCent >= 60) ? "./assets/images/80.jpg" :
-//               (scorePerCent >= 40) ? "./assets/images/80.jpg" :
-//               (scorePerCent >= 20) ? "./assets/images/80.jpg" :
-//               "./assets/images/80.jpg";
-    
-//     scoreDiv.innerHTML = "<img src="+ img +">";
-//     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
-// }
+reStart.addEventListener("click", function(e){
+    location.reload();
+}, false);
+
+
+
+
 
 
 

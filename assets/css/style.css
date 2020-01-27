@@ -164,33 +164,259 @@ body{
 }
 #scoreContainer img{
     position: absolute;
-    /* top:100px;
-    left:325px; */
     width: 700px;
     border-radius: 15px;
 }
 #scoreContainer p{
     position: absolute;
     display: block;
-    background: rgba(255,255,255, 0.4);
-    width : 130px;
-    height :270px;
-    top:130px;
-    left:525px;
+    background: rgba(255,255,255, 0.6);
+    width : 270px;
+    height :100px;
+    top: 190px;
+    left:710px;
     font-size: 1.5em;
     font-weight: bold;
     text-align: center;
+    border-radius: 15px;
     
 }
 
 
-#container{
-    margin : auto;
-    background-color: #B8BEA1;
-    height: 300px;
-    width : 700px;
-    border-radius: 15px;
-    box-shadow: 0px 5px 15px 0px;
-    position: relative;
-    border: #273827 3px solid;
+
+#reStart{
+    font-size: 1.5em;
+    font-weight: bolder;
+    word-break: break-all;
+    width:250px;
+    height:50px;
+    border : 2px solid #273827;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    left:710px;
+    top:280px;
+    color : #273827;
+    margin: 0 auto;
+    background: rgba(255,255,255, 0.6);
 }
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
+{
+    #container{
+        margin : auto;
+        background-color: #B8BEA1;
+        top: 200px;
+        height: 300px;
+        width : 700px;
+        border-radius: 15px;
+        box-shadow: 0px 5px 15px 0px;
+        position: relative;
+        border: #273827 3px solid;
+    }
+
+
+    #reStart{
+        font-size: 1.5em;
+        font-weight: bolder;
+        word-break: break-all;
+        width:250px;
+        height:50px;
+        border : 2px solid #273827;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+        left:400px;
+        top:420px;
+        color : #273827;
+        margin: 0 auto;
+        background: rgba(255,255,255, 0.6);
+    }
+
+    #scoreContainer p{
+        position: absolute;
+        display: block;
+        background: rgba(255,255,255, 0.6);
+        width : 270px;
+        height :100px;
+        top: 440px;
+        left:100px;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 15px;
+        
+    }
+
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px)
+	{
+
+        
+    #start{
+        font-size: 1.5em;
+        font-weight: bolder;
+        word-break: break-all;
+        width:100px;
+        height:150px;
+        border : 2px solid #273827;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+        left:130px;
+        top:170px;
+        color : #273827;
+}
+
+        #container{
+            margin : auto;
+            background-color: #B8BEA1;
+            top: 100px;
+            height: 500px;
+            width : 350px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px 0px;
+            position: relative;
+            border: #273827 3px solid;
+        }
+    
+    
+        #reStart{
+            font-size: 1.5em;
+            font-weight: bolder;
+            word-break: break-all;
+            width:250px;
+            height:50px;
+            border : 2px solid #273827;
+            text-align: center;
+            cursor: pointer;
+            position: absolute;
+            left:430px;
+            top:420px;
+            color : #273827;
+            margin: 0 auto;
+            background: rgba(255,255,255, 0.6);
+        }
+    
+        #scoreContainer p{
+            position: absolute;
+            display: block;
+            background: rgba(255,255,255, 0.6);
+            width : 270px;
+            height :100px;
+            top: 440px;
+            left:150px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 15px;
+            
+        }
+
+        #qImg{
+            width : 180px;
+            height : 180px;
+            position: absolute;
+            left : 0px;
+            top : 150px;
+            padding: 5px;
+            
+        }
+
+        #qImg img{
+            width : 170px;
+            height : 170px;
+            border-radius: 10px;
+            border: #273827 2px solid;
+        }
+
+        #question{
+            width:340px;
+            height : 125px;
+            position: absolute;
+            right:0;
+            top:0;
+        }
+        
+        .choice{
+            display: block;
+            width : 150px;
+            height : 72px;
+            text-align: center;
+            border : 2px solid #273827;
+            border-radius: 5px;
+            cursor: pointer;
+            padding : 5px;
+            font-style: italic;
+            background-color: #598364;
+            margin-top: 5px;
+        }
+        #choices{
+            width : 600px;
+            position: relative;
+            right : 0;
+            top : 125px;
+            margin-left: 185px;
+
+         
+            
+           
+        }
+
+        #scoreContainer{
+            margin : 20px auto;
+            background-color: white;
+            /* opacity: 0.8; */
+            height: 378px;
+            width : 350px;
+            border-radius: 5px;
+            box-shadow: 0px 5px 15px 0px;
+            position: absolute;
+            display: none;
+            transform: translateY(-70%);
+            
+        }
+        #scoreContainer img{
+            position: absolute;
+            width: 350px;
+            height: 520px;
+            border-radius: 15px;
+        }
+        #scoreContainer p{
+            position: absolute;
+            display: block;
+            background: rgba(255,255,255, 0.6);
+            width : 130px;
+            height :200px;
+          
+            left:230px;
+            top: 0px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 15px;
+            
+        }
+
+        #reStart{
+            font-size: 1.5em;
+            font-weight: bolder;
+            word-break: break-all;
+            width:250px;
+            height:50px;
+            border : 2px solid #273827;
+            text-align: center;
+            cursor: pointer;
+            position: absolute;
+            left:50px;
+            top:520px;
+            color : #273827;
+            margin: 0 auto;
+            background: rgba(255,255,255, 0.6);
+        }
+    
+    
+
+    }
