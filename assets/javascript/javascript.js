@@ -132,10 +132,10 @@ function topScore(){
 // score render
 function scoreRender(){
     scoreDiv.style.display = "block";
-       
+      //store high score 
         highScore = Math.max(score, highScore);
         localStorage.setItem(localStorageName, highScore);
-
+    // set score image
         let img = "./assets/images/80.jpg";
             
     scoreDiv.innerHTML = "<img src="+ img +">";
@@ -143,7 +143,7 @@ function scoreRender(){
     reStart.style.display= "block";
 }
 
-
+//restart quiz
 reStart.addEventListener("click", function(e){
     location.reload();
 }, false);
