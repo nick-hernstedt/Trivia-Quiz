@@ -85,7 +85,7 @@ function renderCounter(){
 function checkAnswer(answer){
     if( answer == questions[runningQuestion].correct) {
         //answer is correct
-        score++;
+        score += count;
         //change progress color to green
         answerIsCorrect();
     }else{
