@@ -8,6 +8,8 @@ This is a trivia quiz. It does the following:
 - Allows the user to start the game which begins a timer
 - each question asks the user to match the animal picture to the correct name
 - correct and incorrect answers are displayed and you are given a score at the end
+##
+![Picture of the site](./assets/images/trivia.png)
 
 ## Technologies
 - Responsive Design
