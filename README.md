@@ -1,26 +1,38 @@
-# Trivia-Quiz
-A testing ground for a trivia quiz to showcase what I will be able to do as I grow.
+# Trivia Quiz
+A trivia quiz to test your knowledge of the scientific names of animals
 
-I deployed this website on github.
+## Site URL
+https://nick-hernstedt.github.io/Trivia-Quiz/
+## What it is
+This is a trivia quiz. It does the following:
+- Allows the user to start the game which begins a timer
+- each question asks the user to match the animal picture to the correct name
+- correct and incorrect answers are displayed and you are given a score at the end
 
-Built With
-
+## Technologies
+Responsive Design
 HTML
 CSS
-Bootstrap
-Javascript
-Built for Responsive design, Regular screen size IE - Laptop - Monitor Phone Screens - Iphone X Ipad Screen
+Bootstrap 4
+JavaScript
+jQuery
 
-Testing was done with Google Chrome inspect function,
+## User story
+AS A person wanting to test my animal knowledge,
+I WANT to find an easy-to-use website that will quiz my knowledge without too many buttons or confusing UI elements,
+SO THAT I can see if I really know as much about animals as I think that I do.
 
-I used Github as version control Authors
 
-Nick Hernstedt
-License
+GIVEN a animal trivia website,
 
-I don't have any license except intellectual property
+WHEN I click start quiz,
+THEN a timer is started and I am shown a question.
 
-Acknowledgments
+WHEN I choose an answer,
+THEN my answer is recorded and I am shown if it is correct or incorrect.
 
-Hat tip to anyone whose code was used
-Inspiration
+WHEN I reach the end of the quiz,
+THEN I am shown my score, the high score and asked if I want to play again.
+
+WHEN I restart,
+THEN my high score is saved on the local storage
