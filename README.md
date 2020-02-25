@@ -10,12 +10,12 @@ This is a trivia quiz. It does the following:
 - correct and incorrect answers are displayed and you are given a score at the end
 
 ## Technologies
-Responsive Design
-HTML
-CSS
-Bootstrap 4
-JavaScript
-jQuery
+= Responsive Design
+- HTML
+- CSS
+- Bootstrap 4
+- JavaScript
+- jQuery
 
 ## User story
 AS A person wanting to test my animal knowledge,
