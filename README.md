@@ -10,7 +10,7 @@ This is a trivia quiz. It does the following:
 - correct and incorrect answers are displayed and you are given a score at the end
 
 ## Technologies
-= Responsive Design
+- Responsive Design
 - HTML
 - CSS
 - Bootstrap 4
